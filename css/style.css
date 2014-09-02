@@ -1,0 +1,4 @@
+html, body { background: #eee;}
+body { font: 14px Verdana; margin: 0; }
+h1 { font-weight: normal; margin: 20px 0 0 0;}
+#page-wrap { width: 800px; background-color: #FFF; margin: 0 auto; overflow: hidden; height: 100%;}

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		
+		<link rel='stylesheet' type='text/css' href='css/style.css' />
+		<link rel='stylesheet' type='text/css' href='css/jquery-ui.min.css' />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.min.js"></script> 
+		<script src="js/directoryEdit.js"></script> 
+		<script src="js/directoryView.js"></script> 
+		<script type="text/javascript">
+		$(function(){$("#contentTabs").tabs();});
+		$(function(){$("#directory").accordion();});
+		$('.searchbox').keyup(function(e) {
+				if (e.keyCode == 13) {
+					DirectorySearch();
+				}
+		});
+		window.onload = InitialiseView();
+		window.onload = InitialiseEdit();
+		</script>	
+	</head>
+	<body>
+		<div id="page-wrap">
+			<div id="contentTabs">
+				<ul>
+					<li><a href="#tabs-1">View</a></li>
+					<li><a href="#tabs-2">Edit</a></li>
+				</ul>
+				<div id="tabs-1">
+					<div id="entrySearch">
+						<input type="text" class="searchbox"/>
+						<button id="directorySearchButton" type="button" onclick="DirectorySearch()">Search</button>
+					</div>
+					<div id="directory">
+						<h2 id="contactBox1" class="contactContainer" value="1">
+							<a href="#paragraph1" id="contactLink1 class="contactLink" value="1">
+								<span class="contact" value="1">Sample Contact 1</span>
+							</a>
+						</h2>
+						<div id="contactNumber1" class="contactNumber">
+							<div id='numberRow1' class='numberRow'>
+								<span class='numberName'>Contact 1 (Home): </span><span class='number'>000</span>
+							</div>
+							<div id='numberRow2' class='numberRow'>
+								<span class='numberName'>Contact 1 (Mob): </span><span class='number'>111</span>
+							</div>
+						</div>
+						<h2 id="contactBox2" class="contactContainer" value="2">
+							<a href="#paragraph2" id="contactLink2" class="contactLink" value="2">
+								<span class="contact" value="2">Sample Contact 2</span>
+							</a>
+						</h2>
+						<div id="contactNumber2" class="contactNumber">
+							<div id='numberRow3' class='numberRow'>
+								<span class='numberName'>Contact 2 (Home): </span><span class='number'>222</span>
+							</div>
+						</div>
+						<h2 id="contactBox3" class="contactContainer" value="3">
+							<a href="#paragraph3" id="contactLink3" class="contactLink" value="3">
+								<span class="contact" value="3">Sample Contact 3</span>
+							</a>
+						</h2>
+						<div id="contactNumber3" class="contactNumber">
+							<div id='numberRow4' class='numberRow'>
+								<span class='numberName'>Contact 3 (Work): </span><span class='number'>333</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tabs-2">
+					<div id="tableContainer">
+						Edit Table to be added.
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
